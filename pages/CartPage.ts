@@ -23,6 +23,10 @@ export class CartPage extends BasePage {
   async itemCount(): Promise<number> {
     return this.cartItems.count();
   }
+  /** Removes a product from the cart by its data-test id suffix. */
+  async removeProduct(productId: string): Promise<void> {
+    await this.page.locator(`[data-test="remove-${productId}"]`).click();
+  }
 
   async expectContainsProduct(productName: string): Promise<void> {
     await expect(this.page.locator('.inventory_item_name', { hasText: productName })).toBeVisible();
