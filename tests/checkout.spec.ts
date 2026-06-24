@@ -67,6 +67,7 @@ test.describe('Checkout flow', () => {
     const error = await checkoutPage.getErrorMessage();
     expect(error).toContain('First Name is required');
   });
+  
   test('removing an item empties the cart', async ({ inventoryPage, cartPage }) => {
     await inventoryPage.addProductToCart(PRODUCTS.backpack);
     await inventoryPage.openCart();
