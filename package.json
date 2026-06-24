@@ -1,0 +1,24 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "End-to-end UI automation framework built with Playwright and TypeScript, covering login and checkout flows on saucedemo.com using the Page Object Model.",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:checkout": "playwright test tests/checkout.spec.ts",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://www.saucedemo.com"
+  },
+  "keywords": ["playwright", "typescript", "automation", "e2e", "qa", "testing", "page-object-model"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
